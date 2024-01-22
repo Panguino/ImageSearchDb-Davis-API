@@ -785,6 +785,7 @@ export interface ApiPostPost extends Schema.CollectionType {
       'api::comment.comment'
     >;
     Images: Attribute.Media;
+    Name: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
