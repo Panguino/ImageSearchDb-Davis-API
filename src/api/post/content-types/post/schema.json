@@ -13,7 +13,7 @@
   "pluginOptions": {},
   "attributes": {
     "Date": {
-      "type": "datetime"
+      "type": "date"
     },
     "author": {
       "type": "relation",
@@ -26,12 +26,6 @@
     },
     "Location": {
       "type": "string"
-    },
-    "comments": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::comment.comment",
-      "mappedBy": "post"
     },
     "Images": {
       "type": "media",
@@ -46,6 +40,12 @@
     },
     "Name": {
       "type": "string"
+    },
+    "Comments": {
+      "displayName": "Comments",
+      "type": "component",
+      "repeatable": true,
+      "component": "list.comments"
     }
   }
 }

@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_list_comments",
+  "info": {
+    "displayName": "Comments",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "CommentText": {
+      "type": "text"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::author.author"
+    },
+    "Images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Rating": {
+      "type": "enumeration",
+      "enum": [
+        "Positive",
+        "Neutral",
+        "Negative"
+      ]
+    },
+    "PrintedPageID": {
+      "type": "string"
+    }
+  }
+}

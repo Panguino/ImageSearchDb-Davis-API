@@ -12,11 +12,9 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "FirstName": {
-      "type": "string"
-    },
-    "LastName": {
-      "type": "string"
+    "FullName": {
+      "type": "string",
+      "unique": true
     },
     "posts": {
       "type": "relation",
@@ -24,11 +22,12 @@
       "target": "api::post.post",
       "mappedBy": "author"
     },
-    "comments": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::comment.comment",
-      "mappedBy": "author"
+    "ProfilePicture": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
